@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Web Form</title>
+    <style>
+        .name-info {
+            width: 300px;
+        }
+        .contact-info {
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <h1>My First Web Form</h1>
+    <form method="POST" action="https://jkorpela.fi/cgi-bin/echo.cgi" target="cgi-results">
+        <fieldset >
+            <legend>Name Information:</legend>
+            <label for="firstName">First Name:</label>
+            <input type="text" class="name-info" tabindex="0" required id="firstName" placeholder="Please type your first name" name="firstName"><br>
+            <label for="lastName">Last Name:</label>
+            <input type="text" class="name-info" tabindex="1" required id="lastName" placeholder="Please type your last name" name="lastName">
+        </fieldset>
+        <fieldset>
+            <legend>Contact Information:</legend>
+            <label for="email">Email:</label>
+            <input type="email" class="contact-info" tabindex="2" title="Input Your Email Address" name="email" id="email" placeholder="Input your Email Address"><br>
+            <label for="telephone">Phone:</label>
+            <input type="tel" class="contact-info" tabindex="3" value="6703223220" name="telephone" placeholder="Input a good mobile number" id="telephone">
+        </fieldset>
+        <fieldset>
+            <legend>Date Information:</legend>
+            <label for="dob">Date of Birth:</label>
+            <input type="date" name="dob" tabindex="4" required id="dob"><br>
+            <label for="today">Today's Date:</label>
+            <input type="date" name="today" tabindex="5" value="2022-11-07" id="today">
+        </fieldset>
+        <fieldset>
+            <input tabindex="6" type="submit">
+        </fieldset>
+    </form>
+    <iframe name="cgi-results" id="cg-results"/>
+</body>
+</html>
